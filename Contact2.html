@@ -1,0 +1,523 @@
+  <!--doctype html-->
+  <html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--==Title==================================-->
+    <title>IMAGIX - Full HD Movies-Contact Us</title>
+    <!--Stylesheet(CSS)==========================-->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--==Fav-icon===============================-->
+    <link rel="shortcut icon" href="images/fav-icon.png"/>
+    <!--==Import-poppins-font====================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--==Import-Monoton-Font====================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <!--==Using-Font-Awesome======================-->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <!--==CSS-Swiper==============================-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+    </head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+}
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #262626;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  width: min(900px, 100%);
+  box-shadow: 0 0.5px 0 1px rgba(255, 255, 255, 0.23) inset,
+    0 1px 0 0 rgba(255, 255, 255, 0.66) inset, 0 4px 16px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  padding: 0 35px;
+  text-align: justify;
+}
+
+.info p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.movie-night {
+  background: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+}
+
+.btn {
+  display: block;
+  padding: 10px 40px;
+  margin: 10px auto;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  outline: none;
+  text-decoration: none;
+  color: #784ba0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn:visited {
+  transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+  animation: gelatine 0.5s 1;
+}
+
+@keyframes gelatine {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+/* SWIPER */
+
+.swiper {
+  width: 250px;
+  height: 450px;
+  padding: 50px 0;
+}
+
+.swiper-slide {
+  position: relative;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  user-select: none;
+}
+
+.swiper-slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-position {
+  object-position: 50% 0%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0f2027, transparent, transparent);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  padding: 7px 18px;
+  margin: 10px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.095);
+  box-shadow: inset 2px -2px 20px rgba(214, 214, 214, 0.2),
+    inset -3px 3px 3px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(74px);
+}
+
+.overlay h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 0 0 20px 20px;
+}
+
+/* ANIMATED BACKGROUND */
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+/*
+@media (max-width: 750px) {
+  .content {
+     flex-direction: column-reverse;
+  }
+  
+  .btn {
+    margin: 10px auto 40px;
+  }
+}
+*/
+    </style>
+<body>
+
+  <div id="progress">
+    <span id="progress-value"></span>
+  </div>
+
+  <nav class="navigation">
+    <input type="checkbox" class="menu-btn" id="menu-btn">
+    <label for="menu-btn" class="menu-icon">
+      <span class="nav-icon"></span>
+    </label>
+
+    <a href="index.html" class="logo">
+      IMAGIX<span>.4K</span>
+    </a>
+
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="genre.html">Genre</a></li>
+      <li><a href="tvshows.html">TV Shows</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="Contact2.html">Contact</a></li>
+    </ul>
+
+
+    <form action="#" class="search-box">
+      <input type="text" name="search" placeholder="Search Movie" class="search-input" required />
+      <button type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+  </nav>
+
+    <section>
+        <div class="content">
+          <div class="info">
+            <p>
+              Join us for a fantastic
+              <span class="movie-night">movie night</span> filled with popcorn,
+              laughter, and great company! Whether you're a fan of thrilling
+              action, heartwarming dramas, or side-splitting comedies, we've got a
+              film lineup to cater to all tastes. Save the date and bring your
+              favorite snacks to make it a memorable evening.
+            </p>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="Images/myimage.jpg"
+                  alt="Deepak" />
+                <div class="overlay">
+                  <h2>Deepak Pathak</h2>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  class="img-position"
+                  src="Images/saurabh.jpg"
+                  alt="saurabh" />
+                <div class="overlay">
+                  <h2>Saurabh</h2>
+                </div>
+              </div>
+  
+              <div class="swiper-slide">
+                <img
+                  class="img-position"
+                  src="Images/komal.jpg"
+                  alt="komal" />
+                <div class="overlay">
+                  <h2>Komal</h2>
+                </div>
+              </div>
+
+            
+  
+             
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+   
+
+  <footer>
+    <a href="index.html" class="logo">
+      IMAGIX<span>.4K</span>
+    </a>
+    <span class="copyright">
+      Copyright 2024 - Deepak Kumar Pathak
+    </span>
+  </footer>
+
+        <!--==JS-Swiper====================================-->
+        <script src="js/swiper-bundle.min.js"></script>
+        <!--==jQuery=======================================-->
+        <script src="js/jQuery.js"></script>
+        <script>
+            /*==scroll-progress-bar======================*/
+            let scrollPrecentage = () =>{
+                let scrollProgress = document.getElementById("progress");
+                let progressValue = document.getElementById("progress-value");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round(pos * 100 / calcHeight);
+                scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%)`;
+            }
+            window.onscroll = scrollPrecentage;
+            window.onload = scrollPrecentage;
+            /*Initialize Swiper*/
+            var swiper = new Swiper(".mySwiper", {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+            },
+              navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+              breakpoints: {
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 40,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 50,
+                },
+              },
+            });
+            /*--menu-btn-fixed-when-scroll============*/
+            $(window).scroll(function(){
+                if($(document).scrollTop() > 20){
+                    $('.navigation').addClass('fix-icon');
+                }
+                else{
+                    $('.navigation').removeClass('fix-icon');
+                }
+            });
+            const searchForm = document.querySelector('.search-box');
+
+searchForm.addEventListener('submit', (event) => {
+// Prevent default form submission behavior
+event.preventDefault();
+
+// Get the search term from the input field
+const searchTerm = document.querySelector('.search-input').value.trim().toLowerCase(); // Make search term lowercase
+
+// Check for specific search terms (case-insensitive)
+if (searchTerm === "venom") {
+window.location.href = "venom.html";
+} else if (searchTerm === "pirates") {
+window.location.href = "movie-page.html";
+} else {
+// Handle other searches (optional)
+alert("Movie not found. Please try a different search.");
+}
+});
+
+
+var swiper = new Swiper(".swiper", {
+    effect: "cards",
+    grabCursor: true,
+    initialSlide: 2,
+    speed: 500,
+    loop: true,
+    rotate: true,
+    mousewheel: {
+    invert: false,
+  },
+});
+          </script>
+    </body>
+    </html>
+      
+    
